@@ -1,0 +1,84 @@
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .content {
+        width: 650px;
+    }
+
+    .navigation-width {
+        width: 650px;
+    }
+
+    .news {
+        width: 193px;
+    }
+
+    .main-news-image {
+        height: 110px;
+        width: 193px;
+    } 
+
+    .others-news-image {
+        width: 240px;
+        height: 128px;
+    }
+
+    .others-news, .variant-news {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .main-title {
+        font-size: 32px;
+    }
+
+    .main-subtitle {
+        font-size: 12px;
+    }
+
+    .main-news-about, .footbal-news-about, .variant-news-about {
+        font-weight: 500;
+        font-size: 11px;
+        margin: 15px 0;
+    }
+
+    .notice {
+        font-size: 14px;
+    }
+
+    .description {
+        font-size: 11px;
+    }
+
+    .main-news-with-imgs, .main-news-with-no-imgs {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .others-news {
+        flex-wrap: wrap;
+        padding-left: 35px;
+    }
+
+    .main-news, .main-news-text, .main-news-with-imgs, .main-news-with-no-imgs {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footbal-news {
+        border-right: 0;
+        border-bottom: 1px solid #EBEDEF;
+        padding-bottom: 35px;
+    }
+
+    .variant-news, .footbal-news {
+        padding: 0;
+        padding-bottom: 35px;
+    }
+
+    .variant-news {
+        padding-top: 35px;
+    }
+
+    .other-news {
+        margin-bottom: 40px;
+    }
+}
