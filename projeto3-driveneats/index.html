@@ -1,440 +1,336 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@100;300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Driven Eats</title>
-  </head>
-  <body>
-    <header>
-      <div>
-        <h1>DrivenEats</h1>
-        <h2>Sua comida em 6 minutos</h2>
-      </div>
-    </header>
-    <main>
-      <div>
-        <div class="food-title">
-          <h3>Primeiro, seu prato</h3>
-        </div>
-        <div class="food-categories">
-          <div class="food-cards food">
-            <div id="frango" class="food-box">
-              <div class="food-card">
-                <img
-                  src="/images/frango_yin_yang 2.png"
-                  alt="frango_yin_yang"
-                />
-                <div class="food-content">
-                  <h4>Frango Yin Yang</h4>
-                  <p>Um pouco de batata, um pouco de salada</p>
-                  <div class="food-price">
-                    <div>
-                      <h5>R$</h5>
-                      <h5>14,90</h5>
-                    </div>
-                    <ion-icon id="frango" name="checkmark-circle"></ion-icon>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="carne" class="food-box">
-              <div class="food-card">
-                <img
-                  src="/images/frango_yin_yang 2.png"
-                  alt="frango_yin_yang"
-                />
-                <div class="food-content">
-                  <h4>Frango Yin Yang</h4>
-                  <p>Um pouco de batata, um pouco de salada</p>
-                  <div class="food-price">
-                    <div>
-                      <h5>R$</h5>
-                      <h5>14,90</h5>
-                    </div>
-                    <ion-icon id="carne" name="checkmark-circle"></ion-icon>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="ovo" class="food-box">
-              <div class="food-card">
-                <img
-                  src="/images/frango_yin_yang 2.png"
-                  alt="frango_yin_yang"
-                />
-                <div class="food-content">
-                  <h4>Frango Yin Yang</h4>
-                  <p>Um pouco de batata, um pouco de salada</p>
-                  <div class="food-price">
-                    <div>
-                      <h5>R$</h5>
-                      <h5>14,90</h5>
-                    </div>
-                    <ion-icon
-                      id="checkmark-ovo"
-                      name="checkmark-circle"
-                    ></ion-icon>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="pizza" class="food-box">
-              <div class="food-card">
-                <img
-                  src="/images/frango_yin_yang 2.png"
-                  alt="frango_yin_yang"
-                />
-                <div class="food-content">
-                  <h4>Frango Yin Yang</h4>
-                  <p>Um pouco de batata, um pouco de salada</p>
-                  <div class="food-price">
-                    <div>
-                      <h5>R$</h5>
-                      <h5>14,90</h5>
-                    </div>
-                    <ion-icon
-                      id="checkmark-pizza"
-                      name="checkmark-circle"
-                    ></ion-icon>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="hamburguer" class="food-box">
-              <div class="food-card">
-                <img
-                  src="/images/frango_yin_yang 2.png"
-                  alt="frango_yin_yang"
-                />
-                <div class="food-content">
-                  <h4>Frango Yin Yang</h4>
-                  <p>Um pouco de batata, um pouco de salada</p>
-                  <div class="food-price">
-                    <div>
-                      <h5>R$</h5>
-                      <h5>14,90</h5>
-                    </div>
-                    <ion-icon
-                      id="checkmark-hamburguer"
-                      name="checkmark-circle"
-                    ></ion-icon>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="food-title">
-          <h3>Agora, sua bebida</h3>
-        </div>
-        <div class="food-categories">
-          <div class="food-cards drink">
-            <div
-              id="coca"
-              class="food-box drink"
-              onclick="changeDrinkSelection(id)"
-            >
-              <div class="food-card">
-                <img
-                  src="/images/coca.jpg"
-                  alt="frango_yin_yang"
-                />
-                <div class="food-content">
-                  <h4>Coca-cola</h4>
-                  <p>Coca Lata de 350ml</p>
-                  <div class="food-price">
-                    <div>
-                      <h5>R$</h5>
-                      <h5>5,00</h5>
-                    </div>
-                    <ion-icon
-                      id="checkmark-coca"
-                      name="checkmark-circle"
-                    ></ion-icon>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              id="agua"
-              class="food-box drink"
-              onclick="changeDrinkSelection(id)"
-            >
-              <div class="food-card">
-                <img
-                  src="/images/coca.jpg"
-                  alt="frango_yin_yang"
-                />
-                <div class="food-content">
-                  <h4>Coca-cola</h4>
-                  <p>Coca Lata de 350ml</p>
-                  <div class="food-price">
-                    <div>
-                      <h5>R$</h5>
-                      <h5>5,00</h5>
-                    </div>
-                    <ion-icon
-                      id="checkmark-agua"
-                      name="checkmark-circle"
-                    ></ion-icon>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              id="pepsi"
-              class="food-box drink"
-              onclick="changeDrinkSelection(id)"
-            >
-              <div class="food-card">
-                <img
-                  src="/images/coca.jpg"
-                  alt="frango_yin_yang"
-                />
-                <div class="food-content">
-                  <h4>Coca-cola</h4>
-                  <p>Coca Lata de 350ml</p>
-                  <div class="food-price">
-                    <div>
-                      <h5>R$</h5>
-                      <h5>5,00</h5>
-                    </div>
-                    <ion-icon
-                      id="checkmark-pepsi"
-                      name="checkmark-circle"
-                    ></ion-icon>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              id="guarana"
-              class="food-box drink"
-              onclick="changeDrinkSelection(id)"
-            >
-              <div class="food-card">
-                <img
-                  src="/images/coca.jpg"
-                  alt="frango_yin_yang"
-                />
-                <div class="food-content">
-                  <h4>Coca-cola</h4>
-                  <p>Coca Lata de 350ml</p>
-                  <div class="food-price">
-                    <div>
-                      <h5>R$</h5>
-                      <h5>5,00</h5>
-                    </div>
-                    <ion-icon
-                      id="checkmark-guarana"
-                      name="checkmark-circle"
-                    ></ion-icon>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              id="suco"
-              class="food-box drink"
-              onclick="changeDrinkSelection(id)"
-            >
-              <div class="food-card">
-                <img
-                  src="/images/coca.jpg"
-                  alt="frango_yin_yang"
-                />
-                <div class="food-content">
-                  <h4>Coca-cola</h4>
-                  <p>Coca Lata de 350ml</p>
-                  <div class="food-price">
-                    <div>
-                      <h5>R$</h5>
-                      <h5>5,00</h5>
-                    </div>
-                    <ion-icon
-                      id="checkmark-suco"
-                      name="checkmark-circle"
-                    ></ion-icon>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="food-title">
-          <h3>Primeiro, seu prato</h3>
-        </div>
-        <div class="food-categories">
-          <div class="food-cards">
-            <div class="food-box" onclick="changeFoodSelection(id)">
-              <div class="food-card">
-                <img
-                  src="/images/frango_yin_yang 2.png"
-                  alt="frango_yin_yang"
-                />
-                <div class="food-content">
-                  <h4>Frango Yin Yang</h4>
-                  <p>Um pouco de batata, um pouco de salada</p>
-                  <div class="food-price">
-                    <div>
-                      <h5>R$</h5>
-                      <h5>14,90</h5>
-                    </div>
-                    <ion-icon
-                      class="checkmark"
-                      name="checkmark-circle"
-                    ></ion-icon>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="food-box" onclick="changeFoodSelection(id)">
-              <div class="food-card">
-                <img
-                  src="/images/frango_yin_yang 2.png"
-                  alt="frango_yin_yang"
-                />
-                <div class="food-content">
-                  <h4>Frango Yin Yang</h4>
-                  <p>Um pouco de batata, um pouco de salada</p>
-                  <div class="food-price">
-                    <div>
-                      <h5>R$</h5>
-                      <h5>14,90</h5>
-                    </div>
-                    <ion-icon
-                      class="checkmark"
-                      name="checkmark-circle"
-                    ></ion-icon>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="food-box" onclick="changeFoodSelection(id)">
-              <div class="food-card">
-                <img
-                  src="/images/frango_yin_yang 2.png"
-                  alt="frango_yin_yang"
-                />
-                <div class="food-content">
-                  <h4>Frango Yin Yang</h4>
-                  <p>Um pouco de batata, um pouco de salada</p>
-                  <div class="food-price">
-                    <div>
-                      <h5>R$</h5>
-                      <h5>14,90</h5>
-                    </div>
-                    <ion-icon
-                      class="checkmark"
-                      name="checkmark-circle"
-                    ></ion-icon>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="food-box" onclick="changeFoodSelection(id)">
-              <div class="food-card">
-                <img
-                  src="/images/frango_yin_yang 2.png"
-                  alt="frango_yin_yang"
-                />
-                <div class="food-content">
-                  <h4>Frango Yin Yang</h4>
-                  <p>Um pouco de batata, um pouco de salada</p>
-                  <div class="food-price">
-                    <div>
-                      <h5>R$</h5>
-                      <h5>14,90</h5>
-                    </div>
-                    <ion-icon
-                      class="checkmark"
-                      name="checkmark-circle"
-                    ></ion-icon>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="food-box" onclick="changeFoodSelection(id)">
-              <div class="food-card">
-                <img
-                  src="/images/frango_yin_yang 2.png"
-                  alt="frango_yin_yang"
-                />
-                <div class="food-content">
-                  <h4>Frango Yin Yang</h4>
-                  <p>Um pouco de batata, um pouco de salada</p>
-                  <div class="food-price">
-                    <div>
-                      <h5>R$</h5>
-                      <h5>14,90</h5>
-                    </div>
-                    <ion-icon
-                      class="checkmark"
-                      name="checkmark-circle"
-                    ></ion-icon>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div>
-        <button class="order-disabled">
-          <span>Selecione os 3 itens para fechar o pedido</span>
-        </button>
-        <button class="end-order">Fechar pedido</button>
-      </div>
-    </footer>
 
-    <div class="order-screen">
-      <div class="order-box">
-        <div class="order-title">
-          <h2>Confirme seu pedido</h2>
-        </div>
-        <div class="order-content">
-          <div>
-            <p>Frango</p>
-            <p>14,90</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@100;300;400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Driven Eats</title>
+</head>
+
+<body>
+  <header>
+    <div>
+      <h1>DrivenEats</h1>
+      <h2>Sua comida em 6 minutos</h2>
+    </div>
+  </header>
+  <main>
+    <div>
+      <div class="food-title">
+        <h3>Primeiro, seu prato</h3>
+      </div>
+      <div class="food-categories">
+        <div class="food-cards food">
+          <div id="frango" class="food-box" onclick="changeSelection(this, 'food')">
+            <div class="food-card">
+              <img src="/images/frango_yin_yang 2.png" alt="frango_yin_yang" />
+              <div class="food-content">
+                <h4 id="frango">Frango Yin Yang</h4>
+                <p>Um pouco de batata, um pouco de salada</p>
+                <div class="food-price">
+                  <div>
+                    <h5>R$</h5>
+                    <h5>14,90</h5>
+                  </div>
+                  <ion-icon id="frango" name="checkmark-circle"></ion-icon>
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <p>Frangoasdasdasds</p>
-            <p>14,90</p>
+          <div id="carne" class="food-box" onclick="changeSelection(this, 'food')">
+            <div class="food-card">
+              <img src="/images/frango_yin_yang 2.png" alt="frango_yin_yang" />
+              <div class="food-content">
+                <h4 id="carne">Carne</h4>
+                <p>Um pouco de batata, um pouco de salada</p>
+                <div class="food-price">
+                  <div>
+                    <h5>R$</h5>
+                    <h5>19,90</h5>
+                  </div>
+                  <ion-icon id="carne" name="checkmark-circle"></ion-icon>
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <p>Frangoasdasd</p>
-            <p>14,90</p>
+          <div id="ovo" class="food-box" onclick="changeSelection(this, 'food')">
+            <div class="food-card">
+              <img src="/images/frango_yin_yang 2.png" alt="frango_yin_yang" />
+              <div class="food-content">
+                <h4 id="ovo">Ovo</h4>
+                <p>Um pouco de batata, um pouco de salada</p>
+                <div class="food-price">
+                  <div>
+                    <h5>R$</h5>
+                    <h5>12,45</h5>
+                  </div>
+                  <ion-icon id="checkmark-ovo" name="checkmark-circle"></ion-icon>
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <p>Frangoasdasdasdasdasdaadsdasdaasdasdas</p>
-            <p>14,90</p>
+          <div id="pizza" class="food-box" onclick="changeSelection(this, 'food')">
+            <div class="food-card">
+              <img src="/images/frango_yin_yang 2.png" alt="frango_yin_yang" />
+              <div class="food-content">
+                <h4 id="pizza">Pizza</h4>
+                <p>Um pouco de batata, um pouco de salada</p>
+                <div class="food-price">
+                  <div>
+                    <h5>R$</h5>
+                    <h5>23,67</h5>
+                  </div>
+                  <ion-icon id="checkmark-pizza" name="checkmark-circle"></ion-icon>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="order-buttons">
-          <button class="send-order">Tudo certo, pode pedir!</button>
-          <button class="cancel-order">Cancelar</button>
+          <div id="hamburguer" class="food-box" onclick="changeSelection(this, 'food')">
+            <div class="food-card">
+              <img src="/images/frango_yin_yang 2.png" alt="frango_yin_yang" />
+              <div class="food-content">
+                <h4 id="hamburguer">Hamburguer</h4>
+                <p>Um pouco de batata, um pouco de salada</p>
+                <div class="food-price">
+                  <div>
+                    <h5>R$</h5>
+                    <h5>32,34</h5>
+                  </div>
+                  <ion-icon id="checkmark-hamburguer" name="checkmark-circle"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <div>
+      <div class="food-title">
+        <h3>Agora, sua bebida</h3>
+      </div>
+      <div class="food-categories">
+        <div class="food-cards drink">
+          <div id="coca" class="food-box" onclick="changeSelection(this, 'drink')">
+            <div class="food-card">
+              <img src="/images/coca.jpg" alt="frango_yin_yang" />
+              <div class="food-content">
+                <h4>Coca-cola</h4>
+                <p>Coca Lata de 350ml</p>
+                <div class="food-price">
+                  <div>
+                    <h5>R$</h5>
+                    <h5>5,00</h5>
+                  </div>
+                  <ion-icon id="checkmark-coca" name="checkmark-circle"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="agua" class="food-box" onclick="changeSelection(this, 'drink')">
+            <div class="food-card">
+              <img src="/images/coca.jpg" alt="frango_yin_yang" />
+              <div class="food-content">
+                <h4>Coca-cola</h4>
+                <p>Coca Lata de 350ml</p>
+                <div class="food-price">
+                  <div>
+                    <h5>R$</h5>
+                    <h5>2,00</h5>
+                  </div>
+                  <ion-icon id="checkmark-agua" name="checkmark-circle"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="pepsi" class="food-box" onclick="changeSelection(this, 'drink')">
+            <div class="food-card">
+              <img src="/images/coca.jpg" alt="frango_yin_yang" />
+              <div class="food-content">
+                <h4>Coca-cola</h4>
+                <p>Coca Lata de 350ml</p>
+                <div class="food-price">
+                  <div>
+                    <h5>R$</h5>
+                    <h5>5,00</h5>
+                  </div>
+                  <ion-icon id="checkmark-pepsi" name="checkmark-circle"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="guarana" class="food-box" onclick="changeSelection(this, 'drink')">
+            <div class="food-card">
+              <img src="/images/coca.jpg" alt="frango_yin_yang" />
+              <div class="food-content">
+                <h4>Coca-cola</h4>
+                <p>Coca Lata de 350ml</p>
+                <div class="food-price">
+                  <div>
+                    <h5>R$</h5>
+                    <h5>5,00</h5>
+                  </div>
+                  <ion-icon id="checkmark-guarana" name="checkmark-circle"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="suco" class="food-box" onclick="changeSelection(this, 'drink')">
+            <div class="food-card">
+              <img src="/images/coca.jpg" alt="frango_yin_yang" />
+              <div class="food-content">
+                <h4>Coca-cola</h4>
+                <p>Coca Lata de 350ml</p>
+                <div class="food-price">
+                  <div>
+                    <h5>R$</h5>
+                    <h5>8,50</h5>
+                  </div>
+                  <ion-icon id="checkmark-suco" name="checkmark-circle"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="food-title">
+        <h3>Primeiro, seu prato</h3>
+      </div>
+      <div class="food-categories">
+        <div class="food-cards dessert">
+          <div class="food-box" onclick="changeSelection(this, 'dessert')">
+            <div class="food-card">
+              <img src="/images/frango_yin_yang 2.png" alt="frango_yin_yang" />
+              <div class="food-content">
+                <h4>Frango Yin Yang</h4>
+                <p>Um pouco de batata, um pouco de salada</p>
+                <div class="food-price">
+                  <div>
+                    <h5>R$</h5>
+                    <h5>14,90</h5>
+                  </div>
+                  <ion-icon class="checkmark" name="checkmark-circle"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="food-box" onclick="changeSelection(this, 'dessert')">
+            <div class="food-card">
+              <img src="/images/frango_yin_yang 2.png" alt="frango_yin_yang" />
+              <div class="food-content">
+                <h4>Yin Yang</h4>
+                <p>Um pouco de batata, um pouco de salada</p>
+                <div class="food-price">
+                  <div>
+                    <h5>R$</h5>
+                    <h5>14,90</h5>
+                  </div>
+                  <ion-icon class="checkmark" name="checkmark-circle"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="food-box" onclick="changeSelection(this, 'dessert')">
+            <div class="food-card">
+              <img src="/images/frango_yin_yang 2.png" alt="frango_yin_yang" />
+              <div class="food-content">
+                <h4>Yin Yang</h4>
+                <p>Um pouco de batata, um pouco de salada</p>
+                <div class="food-price">
+                  <div>
+                    <h5>R$</h5>
+                    <h5>14,90</h5>
+                  </div>
+                  <ion-icon class="checkmark" name="checkmark-circle"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="food-box" onclick="changeSelection(this, 'dessert')">
+            <div class="food-card">
+              <img src="/images/frango_yin_yang 2.png" alt="frango_yin_yang" />
+              <div class="food-content">
+                <h4>Yin Yang</h4>
+                <p>Um pouco de batata, um pouco de salada</p>
+                <div class="food-price">
+                  <div>
+                    <h5>R$</h5>
+                    <h5>14,90</h5>
+                  </div>
+                  <ion-icon class="checkmark" name="checkmark-circle"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="food-box" onclick="changeSelection(this, 'dessert')">
+            <div class="food-card">
+              <img src="/images/frango_yin_yang 2.png" alt="frango_yin_yang" />
+              <div class="food-content">
+                <h4>Yin Yang</h4>
+                <p>Um pouco de batata, um pouco de salada</p>
+                <div class="food-price">
+                  <div>
+                    <h5>R$</h5>
+                    <h5>14,90</h5>
+                  </div>
+                  <ion-icon class="checkmark" name="checkmark-circle"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div>
+      <button class="order-disabled">
+        <span>Selecione os 3 itens para fechar o pedido</span>
+      </button>
+      <button class="end-order" onclick="orderButton()">Fechar pedido</button>
+    </div>
+  </footer>
 
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-    <script src="script.js"></script>
-    <script src="script2.js"></script>
-  </body>
+  <div class="order-screen">
+    <div class="order-box">
+      <div class="order-title">
+        <h2>Confirme seu pedido</h2>
+      </div>
+      <div class="order-content">
+        <div class="food-orders">
+          <p></p>
+          <p></p>
+        </div>
+        <div class="food-orders">
+          <p></p>
+          <p></p>
+        </div>
+        <div class="food-orders">
+          <p></p>
+          <p></p>
+        </div>
+        <div class="order-total">
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+      <div class="order-buttons">
+        <button class="send-order" onclick="sendOrder()">Tudo certo, pode pedir!</button>
+        <button class="cancel-order" onclick="cancelOrder()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  <script src="script.js"></script>
+</body>
+
 </html>

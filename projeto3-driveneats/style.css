@@ -1,7 +1,7 @@
 body {
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  background-color: #e5e5e5;
+  background-color: #eeeeee;
 }
 
 h1,
@@ -85,7 +85,7 @@ main > div {
   border: 6px solid #32b72f;
 }
 
-.icon-selected {
+.icon-selected ion-icon {
   color: #32b72f;
 }
 
@@ -173,6 +173,7 @@ footer button {
   background-color: #cbcbcb;
   font-size: 20px;
   color: #fff;
+  cursor: pointer;
 }
 
 span {
@@ -196,7 +197,7 @@ span {
   top: 0;
   bottom: 0;
   background: rgba(255, 255, 255, 0.9);
-  /* display: none; */
+  display: none;
 }
 
 .order-box {
@@ -242,7 +243,12 @@ span {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 280px;
+  width: 60%;
+}
+
+.order-content p:nth-child(2) {
+  width: 40%;
+  text-align: right;
 }
 
 .order-buttons {

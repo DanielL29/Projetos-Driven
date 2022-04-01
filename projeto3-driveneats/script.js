@@ -1,117 +1,68 @@
-// let frango = document.getElementById('frango')
-// let carne = document.getElementById('carne')
-// let ovo = document.getElementById('ovo')
-// let pizza = document.getElementById('pizza')
-// let hamburguer = document.getElementById('hamburguer')
-// let checkmarkFrango = document.getElementById('checkmark-frango')
-// let checkmarkCarne = document.getElementById('checkmark-carne')
-// let checkmarkOvo = document.getElementById('checkmark-ovo')
-// let checkmarkPizza = document.getElementById('checkmark-pizza')
-// let checkmarkHamburguer = document.getElementById('checkmark-hamburguer')
+function changeSelection(food, category) {
+    const selected = document.querySelector(`.${category} .selected`)
+    const checked = document.querySelector(`.${category} .icon-selected`)
 
-// const green = '6px solid #32B72F'
-// const white = '6px solid white'
-
-// function changeFoodSelection(id) {
-//     frango.style.border = white
-//     carne.style.border = white
-//     ovo.style.border = white
-//     pizza.style.border = white
-//     hamburguer.style.border = white
-//     checkmarkFrango.style.color = 'white'
-//     checkmarkCarne.style.color = 'white'
-//     checkmarkOvo.style.color = 'white'
-//     checkmarkPizza.style.color = 'white'
-//     checkmarkHamburguer.style.color = 'white'
-
-//     console.log(frango.childNodes[0].nextSibling.childNodes[3].childNodes[1].innerHTML) // nome
-//     console.log(frango.childNodes[0].nextSibling.childNodes[3].childNodes[5].childNodes[1].innerHTML) // preço
-
-//     if(id === 'frango') {
-//         if(frango.style.border === white) {
-//             frango.style.border = green
-//             checkmarkFrango.style.color = '#32B72F'
-//         } else {
-//             frango.style.border = white
-//             checkmarkFrango.style.color = 'white'
-//         }
-//     } else ''
-//     if(id === 'carne') {
-//         if(carne.style.border === white) {
-//             carne.style.border = green
-//             checkmarkCarne.style.color = '#32B72F'
-//         } else {
-//             carne.style.border = white
-//             checkmarkCarne.style.color = 'white'
-//         }
-//     } else ''
-//     if(id === 'ovo') {
-//         if(ovo.style.border === white) {
-//             ovo.style.border = green
-//             checkmarkOvo.style.color = '#32B72F'
-//         } else {
-//             ovo.style.border = white
-//             checkmarkOvo.style.color = 'white'
-//         }
-//     } else ''
-//     if(id === 'pizza') {
-//         if(pizza.style.border === white) {
-//             pizza.style.border = green
-//             checkmarkPizza.style.color = '#32B72F'
-//         } else {
-//             pizza.style.border = white
-//             checkmarkPizza.style.color = 'white'
-//         }
-//     } else ''
-//     if(id === 'hamburguer') {
-//         if(hamburguer.style.border === white) {
-//             hamburguer.style.border = green
-//             checkmarkHamburguer.style.color = '#32B72F'
-//         } else {
-//             hamburguer.style.border = white
-//             checkmarkHamburguer.style.color = 'white'
-//         }
-//     } else ''
-// }
-
-//     // id === 'frango' ? frango.style.border === white ? frango.style.border = green : frango.style.border = white : ''
-//     // id === 'carne' ? carne.style.border === white ? carne.style.border = green : carne.style.border = white : ''
-//     // id === 'ovo' ? ovo.style.border === white ? ovo.style.border = green : ovo.style.border = white : ''
-//     // id === 'pizza' ? pizza.style.border === white ? pizza.style.border = green : pizza.style.border = white : ''
-//     // id === 'hamburguer' ? hamburguer.style.border === white ? hamburguer.style.border = green : hamburguer.style.border = white : ''
-
-const foodBox = document.querySelectorAll(".food-box");
-const foodSection = document.querySelectorAll("main div");
-const endOrder = document.querySelector("footer div");
-
-foodBox.forEach((el) => {
-  const checkPath = (item) =>
-    item.children[0].children[1].children[2].children[1];
-  const parentPath = el.parentElement.parentElement.parentElement;
-
-  el.onclick = () => {
-    for (let child of el.parentElement.children) {
-      if (child.classList.contains("selected")) {
-        child.classList.remove("selected");
-        checkPath(child).classList.remove("icon-selected");
-      }
+    if(selected !== null && checked !== null) {
+        selected.classList.remove('selected')
+        checked.classList.remove('icon-selected')
     }
-    el.classList.add("selected");
-    checkPath(el).classList.add("icon-selected");
-    parentPath.classList.add("checked");
+    food.classList.add('selected')
+    food.classList.add('icon-selected')
 
-    let count = 0;
-    foodSection.forEach((item) => {
-      if (item.classList.contains("checked") === true) {
-        count++;
-        console.log(count);
-        if (count === item.parentElement.children.length) {
-          endOrder.firstElementChild.style.display = "none";
-          endOrder.lastElementChild.style.display = "initial";
-        }
-      }
-    });
-  };
-});
+    orderButtonVisible()
+}
 
-endOrder.lastElementChild.onclick = () => {};
+function orderButtonVisible() {
+    const ordenScreen = document.querySelector('footer div')
+
+    if(document.querySelectorAll('.selected').length === 3) {
+        ordenScreen.lastElementChild.style.display = "initial"
+        ordenScreen.firstElementChild.style.display = "none"
+    }
+}
+
+function orderButton() {
+    const orderScreen = document.querySelector('.order-screen')
+    const categoriesSelected = document.querySelectorAll('.selected .food-content')
+    const foodOrders = document.querySelectorAll('.food-orders')
+    const orderTotal = document.querySelector('.order-total')
+    let total = 0
+
+    orderScreen.style.display = "flex"
+
+    foodOrders.forEach((order, i) => {
+        order.firstElementChild.innerHTML = categoriesSelected[i].children[0].textContent
+        order.lastElementChild.innerHTML = categoriesSelected[i].children[2].children[0].children[1].textContent
+    })
+    
+    categoriesSelected.forEach((item) => {
+        total += Number(item.children[2].children[0].children[1].textContent.replace(',', '.'))
+    })
+
+    orderTotal.firstElementChild.innerHTML = "TOTAL"
+    orderTotal.lastElementChild.innerHTML = `R$ ${total.toFixed(2).toString().replace('.', ',')}`
+}
+
+function sendOrder() {
+    const name = prompt('Digite o seu nome: ')
+    const address = prompt('Digite o seu endereço: ')
+    const foodOrders = document.querySelectorAll('.food-orders')
+    const orderTotal = document.querySelector('.order-total')
+
+    const encodedText = `Olá, gostaria de fazer um pedido: 
+- Prato: ${foodOrders[0].firstElementChild.textContent} 
+- Bebida: ${foodOrders[1].firstElementChild.textContent}
+- Sobremesa: ${foodOrders[2].firstElementChild.textContent}
+Total: R$ ${Number(orderTotal.lastElementChild.textContent.split(' ')[1].replace(',', '.')).toFixed(2)}
+
+Nome: ${name}
+Endereço: ${address}`
+    
+    const readyMessage = `https://wa.me/5518997157418?text=${encodeURIComponent(encodedText)}`
+    window.open(readyMessage)
+}
+
+function cancelOrder() {
+    const orderScreen = document.querySelector('.order-screen')
+    orderScreen.style.display = "none"
+}
