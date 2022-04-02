@@ -105,8 +105,13 @@ main>div {
 }
 
 .food-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
   width: 100%;
   margin-left: 5px;
+  height: 50%;
 }
 
 .food-price {
@@ -127,7 +132,8 @@ main>div {
 }
 
 .food-card img {
-  height: 87px;
+  min-height: 87px;
+  max-height: 87px;
   min-width: 144px;
   border-radius: 4px;
   margin-top: 13px;
