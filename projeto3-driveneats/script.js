@@ -1,10 +1,14 @@
 function changeSelection(food, category) {
     const selected = document.querySelector(`.${category} .selected`)
     const checked = document.querySelector(`.${category} .icon-selected`)
+    const orderDisabled = document.querySelector('.order-disabled span')
+    let qtd = orderDisabled.innerHTML.split(' ')[2]
 
     if(selected !== null && checked !== null) {
         selected.classList.remove('selected')
         checked.classList.remove('icon-selected')
+    } else {
+        orderDisabled.innerHTML = `${orderDisabled.innerHTML.replace(qtd, Number(qtd - 1).toString())}`
     }
     food.classList.add('selected')
     food.classList.add('icon-selected')
@@ -31,12 +35,12 @@ function orderButton() {
     orderScreen.style.display = "flex"
 
     foodOrders.forEach((order, i) => {
-        order.firstElementChild.innerHTML = categoriesSelected[i].children[0].textContent
-        order.lastElementChild.innerHTML = categoriesSelected[i].children[2].children[0].children[1].textContent
+        order.firstElementChild.innerHTML = categoriesSelected[i].firstElementChild.textContent
+        order.lastElementChild.innerHTML = categoriesSelected[i].querySelector('h5:last-child').textContent
     })
     
     categoriesSelected.forEach((item) => {
-        total += Number(item.children[2].children[0].children[1].textContent.replace(',', '.'))
+        total += Number(item.querySelector('h5:last-child').textContent.replace(',', '.'))
     })
 
     orderTotal.firstElementChild.innerHTML = "TOTAL"

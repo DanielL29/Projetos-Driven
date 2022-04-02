@@ -4,6 +4,10 @@ body {
   background-color: #eeeeee;
 }
 
+img {
+  width: 100%;
+}
+
 h1,
 h3 {
   font-family: "Righteous", cursive;
@@ -26,6 +30,7 @@ header {
   left: 0;
   background-color: #cf2b2b;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1;
 }
 
 header div {
@@ -44,10 +49,10 @@ header h2 {
 }
 
 main {
-  margin: 123px 19px 108px 19px;
+  margin: 123px 0px 108px 0px;
 }
 
-main > div {
+main>div {
   margin-top: 27px;
 }
 
@@ -57,6 +62,7 @@ main > div {
 
 .food-title {
   font-size: 26px;
+  margin-left: 19px;
 }
 
 .food-cards {
@@ -75,7 +81,7 @@ main > div {
   background-color: #fff;
   height: auto;
   min-width: 172px;
-  margin-right: 16px;
+  margin-left: 19px;
   box-sizing: border-box;
   border: 6px solid white;
   cursor: pointer;
@@ -99,20 +105,24 @@ main > div {
 }
 
 .food-content {
+  width: 100%;
   margin-left: 5px;
 }
 
 .food-price {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .food-price div {
   display: flex;
 }
 
-.food-card img, .food-card h4, .food-card p, .food-card h5 {
+.food-card img,
+.food-card h4,
+.food-card p,
+.food-card h5 {
   margin-bottom: 10px;
 }
 
@@ -121,6 +131,7 @@ main > div {
   min-width: 144px;
   border-radius: 4px;
   margin-top: 13px;
+  object-fit: cover;
 }
 
 .food-card h4 {
@@ -149,6 +160,7 @@ footer {
   height: 92px;
   background-color: #fff;
   width: 100%;
+  z-index: 1;
 }
 
 footer div {
@@ -198,13 +210,14 @@ span {
   bottom: 0;
   background: rgba(255, 255, 255, 0.9);
   display: none;
+  z-index: 2;
 }
 
 .order-box {
   width: 377px;
   height: 353px;
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
-  background-color: #50D074;
+  background-color: #50d074;
   border-radius: 9px;
 }
 
@@ -259,7 +272,8 @@ span {
   margin-top: 25px;
 }
 
-.send-order, .cancel-order {
+.send-order,
+.cancel-order {
   width: 329px;
   height: 52px;
   outline: none;
@@ -271,7 +285,7 @@ span {
 }
 
 .send-order {
-  color: #50D074;
+  color: #50d074;
   font-size: 22px;
   background-color: #fff;
 }
@@ -279,7 +293,7 @@ span {
 .cancel-order {
   color: #fff;
   font-size: 20px;
-  background-color: #50D074;
+  background-color: #50d074;
 }
 
 @media screen and (max-width: 414px) {
@@ -288,6 +302,8 @@ span {
   }
 
   .order-screen div {
+    margin-left: auto;
+    margin-right: auto;
     width: 92%;
   }
 }
