@@ -1,0 +1,66 @@
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+    .content {
+        width: 800px;
+    }
+
+    .navigation-width {
+        width: 800px;
+    }
+
+    .main-news-with-no-imgs {
+        align-items: flex-start;
+    }
+
+    .news {
+        width: 113px;
+    }
+
+    .main-news-image {
+        width: 113px;
+        height: 65px;
+    } 
+
+    .others-news-image {
+        width: 180px;
+        height: 95px;
+    }
+
+    .others-news {
+        align-items: flex-start;
+        justify-content:flex-start;
+    }
+
+    .main-news {
+        margin-top: 20px;
+    }
+
+    .others-news {
+        margin-top: 40px;
+    }
+
+    .other-news {
+        margin-bottom: 100px;
+    }
+
+    .main-title {
+        font-size: 32px;
+    }
+
+    .main-subtitle {
+        font-size: 12px;
+    }
+
+    .main-news-about, .footbal-news-about, .variant-news-about {
+        font-weight: 500;
+        font-size: 11px;
+        margin: 15px 0;
+    }
+
+    .notice {
+        font-size: 14px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+}

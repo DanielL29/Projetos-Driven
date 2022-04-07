@@ -1,0 +1,487 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+
+    height: 54px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #DBDBDB;
+    background-color: #FFF;
+    z-index: 1;
+}
+
+.instagram-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 935px;
+    /* background-color: gray; */
+}
+
+.instagram-header-mobile {
+    display: none;
+}
+
+.instagram-box {
+    display: flex;
+    align-items: center;
+}
+
+ion-icon {
+    width: 23px;
+    height: 23px;
+    cursor: pointer;
+}
+
+ion-icon:hover {
+    color: #8E8E8E; 
+}
+
+strong {
+    font-weight: bold;
+}
+
+.instagram-box div {
+    margin: 0 10px;
+    width: 1px;
+    height: 22px;
+    background-color: #DBDBDB;
+}
+
+.instagram-box img {
+    margin-top: 8px;
+}
+
+.instagram-header input {
+    height: 28px;
+    width: 215px;
+    text-align: center;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    background-color: #FAFAFA;
+    color: #979797;
+    outline: none;
+}
+
+.extra-icons {
+    width: 145px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    background-color: #FAFAFA;
+}
+
+.instagram-content {
+    display: flex;
+    /* justify-content: space-between; */
+
+    width: 935px;
+    margin-top: 88px;
+}
+
+.posts {
+    width: 614px;
+    height: 100%;
+}
+
+.stories {
+    display: flex;
+    align-items: center;
+
+    width: 614px;
+    height: 118px;
+    background-color: #FFF;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    overflow: hidden;
+    padding-left: 8px;
+}
+
+.stories div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 85px;
+    margin-left: 2px;
+}
+
+.stories .story-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 66px;
+    height: 66px;
+    background: url('/images/stories_background.jpg');
+    background-repeat: no-repeat;
+    background-size: 66px;
+}
+
+.stories img {
+    width: 56px;
+    cursor: pointer;
+}
+
+.stories h2 {
+    font-weight: 400;
+    font-size: 12px;
+    color: #262626;
+    width: 78px;
+    line-height: 13px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+}
+
+.stories .last {
+    padding-left: 9px;
+}
+
+.stories .forward-circle {
+    position: relative;
+    top: 25%;
+    right: 12%;
+}
+
+.stories .forward-circle img {
+    width: 26px;
+    height: 26px;
+    border-radius: 30px;
+    box-shadow: 1px 4px 4px 1px rgba(100, 100, 100, 0.5);
+}
+
+.cards {
+    margin-top: 24px;
+    width: 100%;
+}
+
+.card {
+    background-color: #FFF;
+    border: 1px solid #DBDBDB;
+    margin-bottom: 60px;
+    border-radius: 3px;
+}
+
+.card-top {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 15px;
+}
+
+.card-top img {
+    width: 32px;
+    cursor: pointer;
+}
+
+.card-top h3 {
+    flex: 1;
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.card-top ion-icon {
+    width: 16px;
+}
+
+.card-image, .card-image img, .card-image video {
+    height: 612px;
+    width: 100%;
+    background-color: #000;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-info .likes {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 12px;
+}
+
+.card-info .likes img {
+    width: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.card-info .likes p {
+    font-size: 14px;
+}
+
+.info-icons {
+    display: flex;
+    align-items: center;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 12px;
+}
+
+.info-icons div ion-icon:nth-child(1) {
+    width: 25px;
+    height: 25px;
+}
+
+.info-icons div{
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.info-icons div ion-icon {
+    margin-right: 15px;
+}
+
+.comments {
+    padding-left: 15px;
+    padding-right: 12px;
+}
+
+.comments h3, .comments h4, .comments p {
+    margin-bottom: 15px;
+}
+
+.comments h3, .comments p {
+    font-size: 14px;
+}
+
+.comments h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #8E8E8E;
+    cursor: pointer;
+}
+
+.comments h6 {
+    font-size: 10px;
+    font-weight: 300;
+    color: #8E8E8E;
+    margin-bottom: 20px;
+}
+
+.publish-comment {
+    display: flex;
+    align-items: center;
+
+    padding: 15px;
+    border-top: 1px solid #EFEFEF;
+}
+
+.publish-comment input {
+    border: none;
+    outline: none;
+    text-align: start;
+    font-size: 14px;
+    font-weight: 400;
+    color: #939393;
+    flex: 1;
+    margin-left: 15px;
+}
+
+.publish-comment h2 {
+    color: #B2DFFC;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all ease-in-out 300ms;
+}
+
+.publish-comment h2:hover {
+    color: #0095F6;
+    transition: all ease-in-out 300ms;
+}
+
+.mobile-bottom-bar {
+    display: none;
+}
+
+main div {
+    width: 100%;
+}
+
+.sidebar {
+    position: fixed;
+    margin-top: 25px;
+    max-width: 293px;
+    margin-left: 28px;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.perfil h2 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #262626;
+    cursor: pointer;
+}
+
+.perfil p {
+    font-size: 15px;
+    font-weight: 300;
+    color: gray;
+}
+
+.perfil div {
+    margin-left: 17px; 
+}
+
+.sugestions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 17px;
+}
+
+.sugestions h3 {
+    font-size: 12px;
+    color: #8E8E8E;
+    font-weight: 500;
+}
+
+.sugestions h4 {
+    font-size: 12px;
+    color: #262626;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+
+.to-follow {
+    margin-bottom: 40px;
+}
+
+.follow-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 17px;
+}
+
+.follow-card div {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.follow-card h3 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.follow-card h4 {
+    font-size: 12px;
+    font-weight: 400;
+    color:#8E8E8E;
+}
+
+.follow-card h2 {
+    font-size: 12px;
+    color:#139EF2;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.about {
+    width: 300px;
+}
+
+.about h5 {
+    font-size: 11px;
+    color:#C7C7C7;
+    margin-bottom: 20px;
+    line-height: 17px;
+}
+
+@media screen and (max-width: 935px) {
+    .sidebar {
+        display: none;
+    }
+
+    .instagram-content {
+        width: 614px;
+    }
+
+    .instagram-header {
+        margin: 0 15px;
+    }
+}
+
+@media screen and (max-width: 614px) {
+    .instagram-header-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #DBDBDB;
+        background-color: #fff;
+        height: 54px;
+        position: fixed;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .instagram-content {
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    .stories {
+        background-color: transparent;
+        border: none;
+    }
+
+    .forward-circle img {
+        display: none;
+    }
+
+    .cards {
+        margin-top: 10px;
+    }
+
+    body {
+        background-color: #FAFAFA;
+    }
+
+    .mobile-bottom-bar {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 54px;
+        background-color: #fff;
+        width: 100%;
+        border-top: 1px solid #DBDBDB;
+        position: fixed;
+        bottom: 0;
+    }
+}
+
+
+
