@@ -1,0 +1,335 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f3f3f3;
+}
+
+strong {
+    font-weight: bold;
+}
+
+span {
+    display: inline-block;
+}
+
+/* Layout Bate Papo UOL */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    padding: 22px;
+}
+
+.logo img {
+    height: 53px;
+    width: 75px;
+}
+
+.users ion-icon {
+    font-size: 42px;
+    cursor: pointer;
+}
+
+main {
+    margin: 106px 0;
+}
+
+.message.in-out-color {
+    background-color: #DCDCDC;
+}
+
+.message.reserved-color {
+    background-color: #FFDEDE;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+
+    background-color: #fff;
+    width: 100%;
+    min-height: 40px;
+    padding: 0 8px;
+    margin-bottom: 4px;
+    font-size: 14px;
+
+    line-height: 20px;
+}
+
+.message .text {
+    padding: 10px 2px;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.message .hour {
+    color: #AAAAAA;
+    margin-right: 5px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    padding: 0 17px;
+}
+
+footer input {
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    color: #000;
+    width: 100%;
+}
+
+footer > div:first-child {
+    flex: 1;
+}
+
+.to-message h4 {
+    color: #505050;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+footer input:focus {
+    font-style: normal;
+}
+
+footer input::placeholder {
+    color: #000;
+}
+
+footer .send-message ion-icon {
+    font-size: 26px;
+    cursor: pointer;
+}
+
+footer .send-message ion-icon:hover {
+    color: #555;
+}
+
+/* Signin Screen */
+
+.signin {
+    display: flex;
+    justify-content: center;
+
+    background-color: #fff;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.signin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 261px;
+    margin-top: 72px;
+}
+
+.name-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signin-container > img {
+    height: 92px;
+    width: 130px;
+    margin-bottom: 94px;
+}
+
+.name-section .name-error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.loading, .loading-messages, .loading-users {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin-container .loading img, .loading-messages img {
+    width: 150px;
+}
+
+.loading-messages {
+    height: calc(100vh - 150px);
+}
+
+.loading-users img {
+    height: 100px;
+}
+
+.loading h3, .loading-messages h3 {
+    font-size: 18px;
+}
+
+.signin-container input {
+    width: 100%;
+    height: 54px;
+    font-size: 18px;
+    font-weight: 400;
+    outline: none;
+    border: 1px solid #D7D7D7;
+    border-radius: 4px;
+    color: #AEAEAE;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.name-section input::placeholder {
+    color: #AEAEAE;
+}
+
+.signin-container button {
+    width: 109px;
+    height: 45px;
+    background-color: #E7E7E7;
+    border-radius: 9px;
+    color: #696969;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Sidebar Users */
+
+aside {
+    display: flex;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    transition: all 500ms ease-in-out;
+}
+
+.black-screen {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+aside > div {
+    background-color: #fff;
+    padding: 0 20px;
+    transition: all 500ms ease-in-out;
+}
+
+aside.active {
+    width: 259px;
+    transition: all 500ms ease-in-out;
+}
+
+.user img, .all-user img, .public img, .reserved img {
+    display: none;
+}
+
+.user.selected img, .all-user.selected img, .public.status img, .reserved.status img {
+    display: initial;
+}
+
+aside > div.active {
+    width: 100%;
+}
+
+.sidebar-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 84px;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar-title h1 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.users-connected {
+    height: 200px;
+    overflow-y: scroll;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.users-connected::-webkit-scrollbar {
+    display: none;
+}
+
+.all-user, .user, .public, .reserved {
+    display: flex;
+    align-items: center;
+
+    height: 36px;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+aside > div ion-icon {
+    font-size: 25px;
+    margin-right: 5px;
+    margin-top: -3px;
+}
+
+aside > div h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 66px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+aside > div p, aside > div h3 {
+    flex: 1;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/uol-favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Bate Papo UOL</title>
+</head>
+
+<body>
+    <!-- Signin Screen -->
+    <div class="signin">
+        <div class="signin-container">
+            <img src="images/logo.png" alt="logo UOL signin">
+            <div class="name-section">
+                <div class="name-error"></div>
+                <input type="text" placeholder="Digite seu nome">
+                <button onclick="signin()">Entrar</button>
+            </div>
+            <div class="loading hidden">
+                <img src="images/loading.gif" alt="loading">
+                <h3>Entrando...</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Messages Loading -->
+    <div class="loading-messages">
+        <img src="images/loading.gif" alt="loading">
+        <h3>Carregando mensagens...</h3>
+    </div>
+
+    <!-- Sidebar Users -->
+
+    <div class="black-screen hidden"></div>
+    <aside>
+        <div>
+            <div class="sidebar-title">
+                <h1>Escolha um contato para enviar mensagem:</h1>
+            </div>
+            <div class="all-user selected" onclick="selectUser(this)">
+                <ion-icon name="people"></ion-icon>
+                <p>Todos</p>
+                <img src="images/check.png" alt="check">
+            </div>
+            <div class="users-connected">
+                <div class="loading-users">
+                    <img src="images/loading.gif" alt="loading">
+                    <h3>Carregando usuários...</h3>
+                </div>
+            </div>
+            <h2>Escolha a visibilidade:</h2>
+            <div class="visibility">
+                <div class="public" onclick="selectVisibility(this)">
+                    <ion-icon name="lock-open"></ion-icon>
+                    <h3>Público</h3>
+                    <img src="images/check.png" alt="check">
+                </div>
+                <div class="reserved" onclick="selectVisibility(this)">
+                    <ion-icon name="lock-closed"></ion-icon>
+                    <h3>Reservadamente</h3>
+                    <img src="images/check.png" alt="check">
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Layout Bate Papo UOL -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="logo UOL header">
+        </div>
+        <div class="users" onclick="toggleUserSidebar()">
+            <ion-icon name="people"></ion-icon>
+        </div>
+    </header>
+    <main></main>
+    <footer>
+        <div>
+            <input type="text" placeholder="Escreva aqui...">
+            <div class="to-message">
+                <h4>Enviando para Todos (Público)</h4>
+            </div>
+        </div>
+        <div class="send-message" onclick="sendMessage()">
+            <ion-icon name="paper-plane-outline"></ion-icon>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
